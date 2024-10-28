@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Virtual Assistant</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #4a90e2;
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        #userInput {
+            flex-grow: 1;
+            padding: 20px;
+            border: 2px solid #4a90e2;
+            border-radius: 25px 0 0 25px;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+        }
+
+        #userInput:focus {
+            outline: none;
+            box-shadow: 0 0 5px #4a90e2;
+        }
+
+        button {
+            padding: 20px 40px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 0 25px 25px 0;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #357ab8;
+            transform: scale(1.05);
+        }
+
+        #responseArea {
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: #555;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            min-height: 300px;
+            max-height: 500px;
+            overflow-y: auto;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            #userInput, button {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Alpha The Daddy</h1>
+    </div>
+    <div class="container">
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="Ask a question...">
+            <button onclick="sendTextQuery()">Send</button>
+        </div>
+        <div id="responseArea">Response will appear here...</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
